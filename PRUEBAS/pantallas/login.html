@@ -1,0 +1,61 @@
+<section id="pantalla-login" class="pantalla activa">
+        <div class="contenedor-centro">
+            <div class="marca-acceso">
+                <div class="marca-cabecera">
+                <span class="logo-icono" aria-hidden="true">
+                    <svg class="logo-libro" viewBox="0 0 80 80" role="img">
+                        <path d="M40 25C31 18 20 17 10 20v39c11-3 21-1 30 6 9-7 19-9 30-6V20c-10-3-21-2-30 5Z" fill="#fff" stroke="#5145CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+                        <path d="M40 26v39" fill="none" stroke="#5145CF" stroke-linecap="round" stroke-width="4"/>
+                        <path d="M17 29c7-1 13 0 18 3M17 38c7-1 13 0 18 3M45 32c5-3 11-4 18-3M45 41c5-3 11-4 18-3" fill="none" stroke="#FF9B55" stroke-linecap="round" stroke-width="3"/>
+                        <path d="m60 15 2.4 4.8 5.3.8-3.8 3.7.9 5.2-4.8-2.5-4.7 2.5.9-5.2-3.8-3.7 5.3-.8L60 15Z" fill="#FF9B55"/>
+                    </svg>
+                </span>
+                <p class="marca-etiqueta">APRENDER TAMBIÉN PUEDE SER UN JUEGO</p>
+                <h1 class="titulo-principal"><span class="titulo-blanco">FLUIDA</span><span class="titulo-naranja">MENTE</span></h1>
+                </div>
+                <p class="marca-descripcion">Un espacio para crecer leyendo, practicar con confianza y celebrar cada avance.</p>
+                <div class="marca-pasos" aria-label="Aprende, practica y avanza">
+                    <span>📚 Aprende</span>
+                    <span>🎤 Practica</span>
+                    <span>⭐ Avanza</span>
+                </div>
+            </div>
+            
+            <div class="caja-login">
+                <div class="acceso-encabezado">
+                    <span class="acceso-kicker">BIENVENIDO DE NUEVO</span>
+                    <h2>¿Cómo quieres entrar?</h2>
+                    <p>Elige tu perfil para continuar.</p>
+                </div>
+                <div class="tabs-login">
+                    <button id="tab-alumno" class="tab activa" onclick="cambiarTabLogin('alumno')">👦🏽 Alumno</button>
+                    <button id="tab-padre" class="tab" onclick="cambiarTabLogin('padre')">👨‍👩‍👧 Padre</button>
+                    <button id="tab-docente" class="tab" onclick="cambiarTabLogin('docente')">👩🏻‍🏫 Maestro</button>
+                </div>
+
+                <div id="form-alumno" class="formulario-login">
+                    <p class="subtitulo" style="font-size: 1.2rem; color: var(--azul-marino); font-weight: 500;">¡Hola! Escribe tu código secreto:</p>
+                    <input type="text" id="input-codigo-alumno" class="input-form codigo-input" placeholder="Ej. FLU-8X2">
+                    <button class="btn-gigante" style="padding: 15px; margin-top: 10px;" onclick="loginCodigo('alumno')">¡Entrar a Jugar!</button>
+                </div>
+
+                <div id="form-padre" class="formulario-login oculta">
+                    <p class="subtitulo">Ingresa el código familiar de tu hijo/a:</p>
+                    <input type="text" id="input-codigo-padre" class="input-form codigo-input" placeholder="Ej. FLU-8X2">
+                    <button class="btn-gigante btn-naranja" style="padding: 15px; margin-top: 10px;" onclick="loginCodigo('padre')">Entrar al Portal Familiar</button>
+                </div>
+
+                <div id="form-docente" class="formulario-login oculta">
+                    <p class="subtitulo">Ingresa con tus credenciales de maestro</p>
+                    <input type="email" id="docente-correo" class="input-form" placeholder="Correo electrónico">
+                    <div class="campo-contrasena-login">
+                        <input type="password" id="docente-pass" class="input-form" placeholder="Contraseña">
+                        <button type="button" id="docente-pass-toggle" class="boton-ver-contrasena" aria-controls="docente-pass" aria-label="Mostrar contraseña" aria-pressed="false" onclick="alternarVisibilidadContrasenaLogin()">Ver</button>
+                    </div>
+                    <button class="btn-gigante" style="background-color: var(--azul-marino); padding: 15px; margin-top: 10px;" onclick="loginDocente()">Ingresar a mis Grupos</button>
+                    <a href="#" onclick="cambiarPantalla('pantalla-recuperar')" style="display: block; margin-top: 15px; font-size: 0.95rem; color: var(--azul-marino); text-align: center; text-decoration: underline;">¿Olvidaste tu contraseña?</a>
+                    <p class="link-registro" style="margin-top: 15px;">¿No tienes cuenta? <a href="#" onclick="cambiarPantalla('pantalla-registro')">Regístrate aquí</a></p>
+                </div>
+            </div>
+        </div>
+    </section>

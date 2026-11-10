@@ -1,0 +1,19 @@
+<section id="pantalla-registro" class="pantalla oculta">
+        <div class="contenedor-centro registro-layout">
+            <span class="logo-icono" style="font-size: 3rem;">🏫</span>
+            <div class="registro-intro">
+                <p class="marca-etiqueta">TU AULA, EN UN SOLO LUGAR</p>
+                <h2>Registro de Docentes</h2>
+                <p>Configura tu perfil para empezar a acompañar el progreso de tus alumnos.</p>
+            </div>
+            <div class="caja-login caja-registro-docente">
+                <input type="text" id="reg-nombre" class="input-form" placeholder="Nombre completo">
+                <input type="text" id="reg-escuela" class="input-form" placeholder="Nombre de tu Escuela Principal">
+                <input type="text" id="reg-grupo" class="input-form" placeholder="Grupo inicial (Ej. 1A)">
+                <input type="email" id="reg-correo" class="input-form" placeholder="Correo electrónico">
+                <input type="password" id="reg-pass" class="input-form" placeholder="Crear contraseña">
+                <button class="btn-gigante" style="padding: 15px;" onclick="registrarDocente()">Crear Cuenta</button>
+                <button class="btn-texto" onclick="cambiarPantalla('pantalla-login')">Volver al Inicio de Sesión</button>
+            </div>
+        </div>
+    </section>

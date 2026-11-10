@@ -1,0 +1,19 @@
+<section id="pantalla-lectura" class="pantalla oculta">
+        <header class="navbar">
+            <div class="logo-nav marca-nav" aria-label="FluidaMente"><span class="logo-icono logo-icono-nav" aria-hidden="true"><svg class="logo-libro" viewBox="0 0 80 80"><use href="#simbolo-libro"/></svg></span><span class="titulo-nav"><span class="titulo-blanco">FLUIDA</span><span class="titulo-naranja">MENTE</span></span></div>
+            <button class="btn-texto" onclick="detenerLecturaYVolver()">Terminar y Volver</button>
+        </header>
+        <div class="contenedor contenedor-centrado">
+            <span class="seccion-etiqueta">MOMENTO DE LEER</span>
+            <h2 id="titulo-nivel-lectura-activo">Lee el siguiente texto:</h2>
+            <div id="texto-lectura-contenedor" class="caja-texto" style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; align-items: center; max-height: 350px; overflow-y: auto;"></div>
+            <div class="estado-microfono" style="margin: 15px 0;">
+                <span class="punto-rojo" id="indicador-grabacion" style="opacity: 0.3;">🔴</span> 
+                <span id="texto-estado-voz">Presiona el botón para comenzar a grabar tu voz.</span>
+            </div>
+            <div style="display: flex; gap: 15px; justify-content: center; margin-top: 15px;">
+                <button id="btn-iniciar-voz" class="btn-primario" style="padding: 15px 30px; font-size: 1.2rem;" onclick="comenzarGrabacionVoz()">🎤 Comenzar a Leer</button>
+                <button id="btn-terminar-voz" class="btn-secundario oculta" style="padding: 15px 30px; font-size: 1.2rem; border-color: #EF4444; color: #EF4444;" onclick="finalizarLecturaVoz()">⏹️ Terminar y Evaluar</button>
+            </div>
+        </div>
+    </section>

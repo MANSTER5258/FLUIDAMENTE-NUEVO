@@ -1,0 +1,82 @@
+<section id="pantalla-maestro" class="pantalla oculta">
+        <header class="navbar">
+            <div class="logo-nav marca-nav" aria-label="FluidaMente"><span class="logo-icono logo-icono-nav" aria-hidden="true"><svg class="logo-libro" viewBox="0 0 80 80"><use href="#simbolo-libro"/></svg></span><span class="titulo-nav"><span class="titulo-blanco">FLUIDA</span><span class="titulo-naranja">MENTE</span></span> <span class="tag-rol">Panel Docente</span></div>
+            <button class="btn-secundario" onclick="cerrarSesion()">Cerrar Sesión</button>
+        </header>
+        <div class="contenedor">
+            <div class="encabezado-dashboard">
+                <div>
+                    <span class="seccion-etiqueta">ESPACIO DOCENTE</span>
+                    <h1>Tu aula, bajo control.</h1>
+                    <p>Organiza tus grupos y acompaña el avance de cada alumno.</p>
+                </div>
+                <div class="dashboard-sello" aria-hidden="true"><span>✦</span> Panel de seguimiento</div>
+            </div>
+            <div class="panel-administracion">
+                <div class="admin-panel-encabezado">
+                    <div class="admin-titulo">
+                        <span class="admin-icono-seccion" aria-hidden="true">🏫</span>
+                        <div>
+                            <span class="seccion-etiqueta">ORGANIZACIÓN</span>
+                            <h2>Escuela y grupos</h2>
+                            <p>Elige el espacio que quieres administrar.</p>
+                        </div>
+                    </div>
+                    <div class="admin-menu-ancla">
+                        <button class="btn-admin-menu" type="button" onclick="toggleMenuAdministracion()" title="Administrar escuela y grupo" aria-label="Administrar escuela y grupo" aria-haspopup="true" aria-expanded="false">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/><circle cx="8" cy="7" r="1.5"/><circle cx="15" cy="12" r="1.5"/><circle cx="10" cy="17" r="1.5"/></svg>
+                            <span>Gestionar</span>
+                            <span class="admin-menu-flecha" aria-hidden="true">⌄</span>
+                        </button>
+                        <div id="menu-administracion" class="menu-desplegable menu-administracion oculta">
+                            <div id="menu-administracion-contenido"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="admin-panel-controles">
+                    <div class="admin-campo">
+                        <label for="select-escuela-docente">Escuela</label>
+                        <div class="admin-control-fila">
+                            <select id="select-escuela-docente" class="input-form" onchange="cambiarEscuela()"></select>
+                            <button class="btn-admin-agregar" type="button" onclick="crearNuevaEscuela()" title="Agregar escuela nueva" aria-label="Agregar escuela nueva">+</button>
+                        </div>
+                    </div>
+                    <div class="admin-campo">
+                        <label for="select-grupo-docente">Grupo</label>
+                        <div class="admin-control-fila">
+                            <select id="select-grupo-docente" class="input-form" onchange="cargarAlumnos()"></select>
+                            <button class="btn-admin-agregar" type="button" onclick="crearNuevoGrupo()" title="Agregar grupo nuevo" aria-label="Agregar grupo nuevo">+</button>
+                        </div>
+                    </div>
+                    <div class="admin-panel-accion">
+                        <span>¿Listo para dar seguimiento?</span>
+                        <button class="btn-primario btn-agregar-alumno" type="button" onclick="agregarAlumnoPrompt()"><span aria-hidden="true">＋</span> Agregar alumno</button>
+                    </div>
+                </div>
+            </div>
+            <div class="seccion-alumnos">
+                <div class="encabezado-listado">
+                    <div>
+                        <span class="seccion-etiqueta">SEGUIMIENTO</span>
+                        <h2>Alumnos</h2>
+                        <p class="subtitulo">Administra a los alumnos de esta escuela y grupo en tiempo real.</p>
+                    </div>
+                    <span class="listado-indicador">Actualizado en tiempo real</span>
+                </div>
+                <div class="tabla-scroll">
+                    <table class="tabla-seguimiento">
+                        <thead>
+                            <tr>
+                                <th>Alumno</th>
+                                <th>Código Familiar</th>
+                                <th>Promedio PPM</th>
+                                <th>Racha Actual</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla-alumnos-body"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>

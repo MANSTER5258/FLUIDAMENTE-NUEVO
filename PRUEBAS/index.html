@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluidamente - Sistema Educativo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+    <script src="vocabulario-palabras.js" defer></script>
+
+</head>
+<body>
+<!-- Logo de FluidaMente definido una sola vez; las barras de navegación lo reutilizan -->
+    <svg width="0" height="0" style="position: absolute;" aria-hidden="true" focusable="false">
+        <symbol id="simbolo-libro" viewBox="0 0 80 80">
+            <path d="M40 25C31 18 20 17 10 20v39c11-3 21-1 30 6 9-7 19-9 30-6V20c-10-3-21-2-30 5Z" fill="#fff" stroke="#5145CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+            <path d="M40 26v39" fill="none" stroke="#5145CF" stroke-linecap="round" stroke-width="4"/>
+            <path d="M17 29c7-1 13 0 18 3M17 38c7-1 13 0 18 3M45 32c5-3 11-4 18-3M45 41c5-3 11-4 18-3" fill="none" stroke="#FF9B55" stroke-linecap="round" stroke-width="3"/>
+            <path d="m60 15 2.4 4.8 5.3.8-3.8 3.7.9 5.2-4.8-2.5-4.7 2.5.9-5.2-3.8-3.7 5.3-.8L60 15Z" fill="#FF9B55"/>
+        </symbol>
+    </svg>
+
+    <div id="errores-carga" role="alert" aria-live="polite" hidden></div>
+    <main id="aplicacion"></main>
+    <script src="js/cargador.js" defer></script>
+</body>
+</html>

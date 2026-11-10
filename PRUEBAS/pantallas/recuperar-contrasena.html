@@ -1,0 +1,15 @@
+<section id="pantalla-recuperar" class="pantalla oculta">
+        <div class="contenedor-centro registro-layout">
+            <span class="logo-icono" style="font-size: 3rem;">🔐</span>
+            <div class="registro-intro">
+                <p class="marca-etiqueta">RECUPERACIÓN</p>
+                <h2>¿Olvidaste tu contraseña?</h2>
+                <p>Ingresa tu correo y te enviaremos un enlace seguro para crear una nueva.</p>
+            </div>
+            <div class="caja-login caja-registro-docente">
+                <input type="email" id="input-recuperar-correo" class="input-form" placeholder="Correo electrónico registrado">
+                <button class="btn-gigante" style="padding: 15px;" onclick="enviarCorreoRecuperacion()">Enviar Enlace</button>
+                <button class="btn-texto" onclick="cambiarPantalla('pantalla-login')">Cancelar y Volver</button>
+            </div>
+        </div>
+    </section>

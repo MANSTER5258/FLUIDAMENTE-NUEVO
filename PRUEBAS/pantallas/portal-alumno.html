@@ -1,0 +1,42 @@
+<section id="pantalla-familiar" class="pantalla oculta">
+        <header class="navbar">
+            <div class="logo-nav marca-nav" aria-label="FluidaMente"><span class="logo-icono logo-icono-nav" aria-hidden="true"><svg class="logo-libro" viewBox="0 0 80 80"><use href="#simbolo-libro"/></svg></span><span class="titulo-nav"><span class="titulo-blanco">FLUIDA</span><span class="titulo-naranja">MENTE</span></span></div>
+            <button class="btn-secundario" onclick="cerrarSesion()">Salir</button>
+        </header>
+        <div class="contenedor">
+            <div class="saludo">
+                <span class="saludo-etiqueta">TU ESPACIO DE APRENDIZAJE</span>
+                <h2 id="saludo-alumno">¡Hola, Campeón! 👋</h2>
+                <p>Portal conectado. ¡Sigue practicando para subir de nivel!</p>
+            </div>
+            <div class="grid-progresion">
+                <div class="tarjeta-racha">
+                    <div class="icono-grande">🔥</div>
+                    <div class="info-progreso">
+                        <h3>Racha Actual</h3>
+                        <p><strong id="racha-dias">0 días</strong> consecutivos</p>
+                    </div>
+                </div>
+                <div class="tarjeta-rango">
+                    <div class="icono-grande">⭐</div>
+                    <div class="info-progreso">
+                        <h3>Tu Rango</h3>
+                        <p><strong id="rango-texto">Rango principiante</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="encabezado-actividades">
+                <span class="seccion-etiqueta">SIGUIENTE PASO</span>
+                <h2>¿Qué quieres practicar hoy?</h2>
+            </div>
+            <div class="grid-dashboard">
+                <button class="btn-gigante" onclick="cambiarPantalla('pantalla-niveles-lectura'); actualizarInterfazNivelesLectura();"><span class="icono-btn">🎤</span> Niveles de Lectura</button>
+                <button class="btn-gigante btn-naranja" onclick="cambiarPantalla('pantalla-refuerzo'); actualizarInterfazNiveles();"><span class="icono-btn">🎯</span> Repasar Palabras</button>
+                <!-- Botón Nuevo (Clínica) -->
+                 <button class="btn-gigante" style="grid-column: 1 / -1; background: #10B981 !important; box-shadow: 0 4px 0 #059669 !important; margin-top: 5px; color: white !important;" onclick="iniciarRepasoErrores();">
+                    <span class="icono-btn">🚑</span> Clínica de Palabras (Repaso)
+                </button>
+                    
+            </div>
+        </div>
+    </section>

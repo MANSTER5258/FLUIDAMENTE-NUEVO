@@ -1,0 +1,46 @@
+<section id="pantalla-refuerzo" class="pantalla oculta">
+        <header class="navbar">
+            <div class="logo-nav marca-nav" aria-label="FluidaMente"><span class="logo-icono logo-icono-nav" aria-hidden="true"><svg class="logo-libro" viewBox="0 0 80 80"><use href="#simbolo-libro"/></svg></span><span class="titulo-nav"><span class="titulo-blanco">FLUIDA</span><span class="titulo-naranja">MENTE</span></span></div>
+            <button class="btn-texto" onclick="cambiarPantalla('pantalla-familiar')">Terminar y Volver</button>
+        </header>
+        <div class="contenedor">
+            <div class="encabezado-aprendizaje">
+                <span class="aprendizaje-icono">🎯</span>
+                <div>
+                    <span class="seccion-etiqueta">PRÁCTICA DIARIA</span>
+                    <h2>Tu camino de sílabas y palabras</h2>
+                    <p>Elige un círculo para practicar cinco sílabas o palabras y avanzar a tu ritmo.</p>
+                </div>
+            </div>
+            <div class="progreso-curso" id="progreso-curso-palabras">
+                <div class="progreso-curso-cabecera">
+                    <span>Progreso del curso</span>
+                    <strong id="progreso-curso-resumen">0 de 3,000 actividades</strong>
+                </div>
+                <div class="progreso-curso-pista"><span id="progreso-curso-barra"></span></div>
+            </div>
+
+            <div id="ruta-palabras" class="ruta-aprendizaje ruta-palabras"></div>
+
+            <div id="practica-palabras" class="practica-palabras oculta">
+                <div class="practica-palabras-cabecera">
+                    <button class="btn-secundario" onclick="volverRutaPalabras()">← Ver todos los niveles</button>
+                    <span class="practica-contador" id="practica-palabras-progreso">0 de 5 actividades</span>
+                </div>
+                <div class="practica-titulo">
+                    <span class="seccion-etiqueta">TU RETO</span>
+                    <h2 id="practica-palabras-titulo">Practica sílabas y palabras</h2>
+                    <p>Toca el micrófono y pronuncia cada sílaba o palabra en voz alta.</p>
+                </div>
+                <div id="lista-palabras-contenedor" class="lista-palabras"></div>
+                <div id="practica-completada" class="practica-completada oculta">
+                    <span>🏆</span>
+                    <div>
+                        <strong>¡Lección completada!</strong>
+                        <p>¡Lo hiciste genial! Elige otro círculo para seguir practicando.</p>
+                    </div>
+                    <button class="btn-primario" onclick="volverRutaPalabras()">Continuar</button>
+                </div>
+            </div>
+        </div>
+    </section>

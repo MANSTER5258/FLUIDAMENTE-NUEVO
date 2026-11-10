@@ -1,0 +1,22 @@
+<section id="pantalla-clinica" class="pantalla oculta">
+        <header class="navbar">
+            <div class="logo-nav marca-nav" aria-label="FluidaMente"><span class="logo-icono logo-icono-nav" aria-hidden="true"><svg class="logo-libro" viewBox="0 0 80 80"><use href="#simbolo-libro"/></svg></span><span class="titulo-nav"><span class="titulo-blanco">FLUIDA</span><span class="titulo-naranja">MENTE</span></span></div>
+            <button class="btn-texto" onclick="cambiarPantalla('pantalla-familiar')">Volver al Portal</button>
+        </header>
+        <div class="contenedor">
+            <div class="encabezado-aprendizaje">
+                <span class="aprendizaje-icono">🚑</span>
+                <div>
+                    <span class="seccion-etiqueta">CLÍNICA DE PALABRAS</span>
+                    <h2>Palabras por mejorar</h2>
+                    <p>Estas son las palabras que más trabajo te han costado (2 o más intentos fallidos). ¡Vamos a dominarlas!</p>
+                </div>
+            </div>
+            <div id="lista-errores-contenedor" class="lista-palabras" style="margin-top: 20px;"></div>
+            <div id="mensaje-sin-errores" class="oculta" style="text-align: center; padding: 40px; background: white; border-radius: 12px; margin-top: 20px; border: 2px dashed #CBD5E1;">
+                <span style="font-size: 3rem; display: block; margin-bottom: 10px;">🌟</span>
+                <h3 style="color: var(--azul-marino);">¡Todo excelente!</h3>
+                <p style="color: #64748B;">No tienes palabras pendientes por repasar.</p>
+            </div>
+        </div>
+    </section>
