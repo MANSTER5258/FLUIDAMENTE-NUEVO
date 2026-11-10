@@ -18,4 +18,4 @@
 - `style.css`: estilos compartidos.
 - `vocabulario-palabras.js`: vocabulario de las actividades.
 
-El orden de carga de los módulos está definido en `js/cargador.js`; conserva ese orden porque algunos módulos usan datos y funciones compartidos. Las pantallas se cargan con `fetch`, así que la app debe abrirse desde el hosting o un servidor web, no directamente con doble clic en `index.html`.
+El orden de carga de los módulos está definido en `js/cargador.js`; no le muevan a ese orden porque los módulos usan datos y funciones compartidos. Las pantallas se cargan con `fetch`, así que la app debe abrirse desde el hosting o un servidor web, no directamente con doble clic en `index.html`.
